@@ -74,8 +74,8 @@ def run_extraction(main_path, db_path, out_path, input_date):
             qty_val = f"{g_val}{h_val}"  # 新索引 7+8
 
             po_val = row.iloc[10] if len(row) > 10 else ""  # 新索引
-            lot_val = row.iloc[20] if len(row) > 20 else ""  # 新索引
-            rea_val = row.iloc[21] if len(row) > 21 else ""  # 新索引
+            lot_val = row.iloc[20] if len(row) > 22 else ""  # 新索引
+            rea_val = row.iloc[21] if len(row) > 23 else ""  # 新索引
 
             sap_key = str(sap_val).strip().lower()
             prod_a, prod_d = db_map.get(sap_key, ("(未找到)", "(未找到)"))
