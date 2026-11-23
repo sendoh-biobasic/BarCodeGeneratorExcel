@@ -74,8 +74,8 @@ def run_extraction(main_path, db_path, out_path, input_date):
             qty_val = f"{g_val}{h_val}"  # 新索引 7+8
 
             po_val = row.iloc[10] if len(row) > 10 else ""  # 新索引
-            lot_val = row.iloc[20] if len(row) > 22 else ""  # 新索引
-            rea_val = row.iloc[21] if len(row) > 23 else ""  # 新索引
+            lot_val = row.iloc[22] if len(row) > 22 else ""  # 新索引
+            rea_val = row.iloc[23] if len(row) > 23 else ""  # 新索引
 
             sap_key = str(sap_val).strip().lower()
             prod_a, prod_d = db_map.get(sap_key, ("(未找到)", "(未找到)"))
@@ -138,7 +138,7 @@ def on_run():
 
 # ========== 修复后的窗口布局 ==========
 root = tk.Tk()
-root.title("Excel 数据提取工具 v1.3")
+root.title("Excel 数据提取工具 v1.4")
 root.geometry("600x320")  # 稍微调宽了一点
 root.resizable(False, False)
 
